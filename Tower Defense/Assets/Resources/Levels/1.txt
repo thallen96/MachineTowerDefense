@@ -1,0 +1,14 @@
+//Command parameters
+//Spawn float(delay after) float(noise) bool("0" for enemy, "1" for ally) int(index of Unit in UnitGenerator [optional])
+//Spawn delay noise isEnemy index
+//Execute(Executes number of commands before it) float(delay before) int(indices above the execute command you want to start) int(number of times you want the line to execute)
+//Execute delay numCommands numTimesToExecute
+//Wait float(delay after)
+//Wait delay
+//After the End command, the next rest of the lines will be displayed in the informational text.
+Spawn 2 0 1 0
+Spawn 2 0 0 0
+Execute 0 2 3
+End
+As the game progresses, each new level will have more enemies to defeat and more allies to give you money.
+The Enemy:Ally ratio cutoff defines what ratio of Enemies to Allies the tower must meet to shoot. 0 will shoot if any Enemy is present. 1 will shoot if Enemies equals Allies, and -1 will shoot at everything.
